@@ -1,69 +1,62 @@
 # React + TypeScript + Vite
 
+CAR CAMPAIGN SITE
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Car Sale Campaign Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a simple **React + TypeScript + Tailwind + MUI** web app designed for a car sale campaign.  
+It features a **registration form**, a **success page**, and accessibility best practices to ensure usability for all users.  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Registration Form**  
+  - Users can submit their details to register for the campaign.  
+  - Data is stored both in the **localStorage** for persistence.  
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Success Page**  
+  - Confirms successful registration with a clear accessible message.  
+  - Provides a link back to the home page.  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Accessibility**  
+  - Semantic HTML (`<main>`, `<form>`, `<label>`, `<button>`).  
+  - `aria-*` attributes for assistive technologies.  
+  - High-contrast color choices and focus styles for keyboard navigation.  
+  - Proper headings for screen readers.  
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** with TypeScript  
+- **React Router** for navigation  
+- **Tailwind CSS** for styling  
+- **MUI (Material-UI)** for UI components  
+- **LocalStorage** for client-side persistence  
+
+---
+
+
+---
+
+## ▶️ Running the Project
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/your-username/car-campaign_site.git
+   cd car-campaign_site
+   pnpm install
+   pnpm d => dev
+
+Build for production
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+pnpm b => build
+pnpm preview
 ```
+Can inspect the saved data in the browser’s DevTools → Application → Local Storage.
+
+
+
